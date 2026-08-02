@@ -1,26 +1,78 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Main palette */
+  --background: #fff3f7;
+  --foreground: #120d0b;
+
+  /* Surfaces */
+  --surface: #ffffff;
+  --surface-muted: #fff8fa;
+
+  /* Primary / Actions */
+  --primary: #3b241c;
+  --primary-hover: #2a1812;
+  --primary-foreground: #ffffff;
+
+  /* Supporting colors */
+  --muted: #6f5d58;
+  --border: #efd6df;
+
+  /* Pink accents */
+  --pink-soft: #ffe7ef;
+  --pink-border: #f3cbd7;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+
+  --color-pink-soft: var(--pink-soft);
+  --color-pink-border: var(--pink-border);
+
+  --font-sans: var(--font-geist);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
+  min-height: 100vh;
+  margin: 0;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+::selection {
+  background: #f4cbd7;
+  color: #120d0b;
 }
