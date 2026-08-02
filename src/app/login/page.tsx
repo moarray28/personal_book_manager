@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 
 import Button from "@/components/ui/Button";
 import Input from "@/components/ui/Input";
+import Navbar from "@/components/layout/Navbar";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -53,7 +54,11 @@ export default function LoginPage() {
   }
 
   return (
+    <>
+    
+        <Navbar isPublic={true} />
     <main className="flex min-h-screen items-center justify-center bg-background px-6">
+
       <div className="w-full max-w-md rounded-2xl border border-border bg-surface p-8 shadow-sm">
         <div className="mb-8 text-center">
           <h1 className="text-3xl font-bold text-foreground">
@@ -120,5 +125,6 @@ export default function LoginPage() {
         </p>
       </div>
     </main>
+    </>
   );
 }

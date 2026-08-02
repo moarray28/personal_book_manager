@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-
+import Navbar from "@/components/layout/Navbar";
 import Button from "@/components/ui/Button";
 import Input from "@/components/ui/Input";
 
@@ -55,6 +55,9 @@ export default function SignupPage() {
   }
 
   return (
+  <>          
+  <Navbar isPublic={true} />
+   
     <main className="flex min-h-screen items-center justify-center bg-background px-6">
       <div className="w-full max-w-md rounded-2xl border border-border bg-surface p-8 shadow-sm">
         <div className="mb-8 text-center">
@@ -133,5 +136,6 @@ export default function SignupPage() {
         </p>
       </div>
     </main>
+    </>
   );
 }

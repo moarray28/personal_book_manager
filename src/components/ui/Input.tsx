@@ -28,7 +28,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
             "focus:border-primary focus:ring-2 focus:ring-primary/20",
             "disabled:cursor-not-allowed disabled:bg-gray-100 disabled:opacity-70",
             error &&
-              "border-red-500 focus:border-red-500 focus:ring-red-200",
+              " focus:border-red-500 focus:ring-red-200",
             className
           )}
           {...props}
